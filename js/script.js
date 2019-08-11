@@ -55,5 +55,17 @@
         };
         init();
     }();
-}
-)
+
+    // switch light/dark
+
+    $("#switch").on('click', function () {
+        if ($("body").hasClass("light")) {
+            $("body"),removeClass("light");
+            $("#seitch").removeClass("switched");
+        }
+        else{
+            $("body").addClass("light");
+            $("#switch").addClass("switched");
+        }
+    });
+})(jquery);
